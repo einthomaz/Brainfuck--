@@ -20,10 +20,3 @@ jobs:
       run: |
         crystal build brainfuck.cr
         ./brainfuck -f brainfuck--_example -r 128
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: dist-without-markdown
-        path: |
-          dist
-          !dist/**/*.md
