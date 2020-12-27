@@ -1,14 +1,14 @@
-++++++++++++++++++++++++++++++ --  ->   Sets the ammount of numbers to generate (minus 2 for the already existing 2).
->++ -> Sets the ammount of numbers already generated in register 2.
->+/ -> Sets the number in register 3 to 1 (first fibonacci number) and prints it.
->+/ -> Sets the number in register 4 to 1 (second fibonacci number) and prints it.
-<<#< -> Stores the number from register 2 and goes to register 1.
-[ -> Opens a loop until the number in register 1 is 0.
-    >& -> Goes to register 2 and jumps the stored number of registers to the right. (Now in register 4)
-    [>+>+<<-] -> Copies the value from register 4 to register 5 and register 6.
-    >>[<<+>>-] -> Copies the register 6 to register 4.
-    <<<[>>+>+<<<-] -> Copies the value from register 3 to register 5 and register 6.
-    >>>[<<<+>>>-]</> -> Copies the value from register 6 to register 3.
-    << -> Goes to register 4
-    %+#<- -> Jumps sotred number of registers to the left, adds 1, stores the value, and subtracts 1 from the first register.
-] -> repeated, until the number in register 1 is 0.
+++++++++++++++++++++++++++++++ --
+>++
+>+/
+>+/
+<<#<
+[
+    >&
+    [>+>+<<-]
+    >>[<<+>>-]
+    <<<[>>+>+<<<-]
+    >>>[<<<+>>>-]</>
+    <<
+    %+#<-
+]
