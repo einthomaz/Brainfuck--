@@ -19,6 +19,6 @@ jobs:
     - name: Install dependencies
       run: shards install
     - name: Run tests
-      run: crystal spec
-      run: crystal build main.cr
-      run: ./main -f brainfuck--_example -r 128
+      run: |
+        crystal build main.cr
+        ./main -f brainfuck--_example -r 128
